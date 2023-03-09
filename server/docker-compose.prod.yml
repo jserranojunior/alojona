@@ -14,7 +14,7 @@ services:
     networks:
       - stack_ponte
     ports:
-      - "3100:80"
+      - "3180:80"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.alojona.rule=Host(`www.${DOMAIN}`,`${DOMAIN}`)"
