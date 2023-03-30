@@ -17,6 +17,6 @@ services:
       - "3180:80"
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.alojona.rule=Host(`www.${DOMAIN}`,`${DOMAIN}`)"
+      - "traefik.http.routers.alojona.rule=Host(`alojona.${DOMAIN}`, `alojona.com`, `www.alojona.com`)"
       - traefik.http.services.alojona.loadbalancer.server.port=80
       - "traefik.http.routers.alojona.tls.certresolver=le"

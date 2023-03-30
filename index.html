@@ -2,77 +2,71 @@
 <html>
 
 <head>
-  <title>Site em Construção</title>
+  <title>A Lojona</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      background-color: #ff0000;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding-top: 40px;
-    }
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.17/dist/tailwind.min.css" rel="stylesheet">
 
-    h1 {
-      color: #FFFFFF;
-      font-size: 48px;
-      margin-bottom: 50px;
-    }
+  <link rel="stylesheet" href="./style.css">
 
-    p {
-      color: #FFFFFF;
-      font-size: 24px;
-      margin-bottom: 30px;
-    }
-
-    .text-white {
-      color: #fff
-    }
-
-    .pre-cadastro-btn {
-      background-color: #FF4136;
-      color: #FFFFFF;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .pre-cadastro-btn:hover {
-      background-color: #FF725C;
-      color: #FFFFFF;
-    }
-
-    .pre-cadastro-btn.white {
-      background-color: #FFFFFF;
-      color: #000000;
-      /* adicionando cor preta */
-      border: 1px solid #FF4136;
-    }
-
-    .pre-cadastro-btn.white:hover {
-      background-color: #FF4136;
-      color: #FFFFFF;
-    }
-  </style>
 </head>
 
 <body>
 
-  <img src="./logo.jpeg" alt="alojona" width="350">
-  <h2>Site em Construção</h2>
+  <img src="./logo.jpeg" class="mx-auto" alt="alojona" width="200">
+  <div class="flex justify-center">
+    <div class="w-full px-4  md:w-1/3">
+
+
+      <div class="bg-white bg-opacity-80 rounded-xl p-6 text-center shadow">
+        <h2 class="mt-0 text-2xl font-bold">Ligando o mundo da moda!</h2>
+        <p class="mb-4">Seja parte como:</p>
+        <ul class="list-none p-0 m-0">
+          <li class="my-1">Lojista</li>
+          <li class="my-1">Cliente</li>
+          <li class="my-1">Sócio</li>
+          <li class="my-1">Investidor Anjo</li>
+          <li class="my-1">Franqueado loja física</li>
+          <li class="my-1">Afiliado</li>
+          <li class="my-1">Outro</li>
+        </ul>
+
+
+
+        <a href="https://wa.me/11946439695" target="_blank" rel="noopener noreferrer"
+          class="mt-4 inline-flex items-center px-4 py-2 bg-green-500 hover:bg-green-600 text-white font-medium rounded-md shadow-md"
+          onclick="openWhatsApp()">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 20l3-2.938M8 21l3-3M12 21l3-3M16 21l3-3M20 20l-2.938-3M21 16l-3-3M21 12l-3-3M21 8l-3-3M20 4l-2.938 3M16 3l-3 3M12 3l-3 3M8 3l-3 3M4 4l2.938 3">
+            </path>
+          </svg>
+          <span>Chamar via WhatsApp</span>
+        </a>
+
+      </div>
+
+
+    </div>
+  </div>
+
+
+  <!--   <h2>Site em Construção</h2>
   <p>Estamos trabalhando duro para finalizar o site o mais breve possível. Obrigado pela paciência!</p>
 
   <button class="pre-cadastro-btn white" onclick="alerta()">Pré Cadastro</button>
-
+ -->
 </body>
 
 </html>
 
 <script>
-  function alerta() {
-    alert("Este recurso ainda está em desenvolvimento");
+  function openWhatsApp() {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    var phoneNumber = '11984526015';
+    var url = isMobile ? 'whatsapp://send?phone=' : 'https://web.whatsapp.com/send?phone=';
+    window.open(url + phoneNumber);
   }
+
 </script>
